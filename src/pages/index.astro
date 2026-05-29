@@ -136,12 +136,11 @@
 
     /* MESSENGERS */
     /* VIDEO WIDGET */
-    .video-widget { position: fixed; bottom: 28px; left: 28px; z-index: 200; width: 220px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.3); transition: all 0.3s; }
+    .video-widget { position: fixed; bottom: 28px; left: 28px; z-index: 200; width: 100px; border-radius: 12px; overflow: hidden; box-shadow: 0 8px 32px rgba(0,0,0,0.3); }
     .video-widget.hidden { display: none; }
-    .video-widget__header { background: var(--green); color: white; padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; font-weight: 600; cursor: pointer; }
-    .video-widget__close { background: none; border: none; color: white; cursor: pointer; font-size: 14px; line-height: 1; padding: 0; opacity: 0.8; transition: opacity 0.2s; }
+    .video-widget__close { position: absolute; top: 6px; right: 6px; background: rgba(0,0,0,0.5); border: none; color: white; cursor: pointer; font-size: 12px; line-height: 1; padding: 3px 6px; border-radius: 4px; opacity: 0.8; transition: opacity 0.2s; z-index: 1; }
     .video-widget__close:hover { opacity: 1; }
-    .video-widget__body { height: 130px; background: #000; }
+    .video-widget__body { height: 180px; background: #000; position: relative; }
 
     .msng { position: fixed; bottom: 28px; right: 28px; z-index: 200; display: flex; flex-direction: column; gap: 10px; }
     .msng a { width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 14px rgba(0,0,0,0.22); transition: transform 0.2s; }
@@ -381,11 +380,8 @@
 
 <!-- ВИДЕО ВИДЖЕТ -->
 <div class="video-widget" id="videoWidget">
-  <div class="video-widget__header" id="videoWidgetHeader">
-    <span>📹 Наше производство</span>
-    <button class="video-widget__close" id="videoClose" aria-label="Закрыть">✕</button>
-  </div>
   <div class="video-widget__body">
+    <button class="video-widget__close" id="videoClose" aria-label="Закрыть">✕</button>
     <video src="/vide3939-6262-4138-b264-613663393231___1_2_3.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;display:block;"></video>
   </div>
 </div>
